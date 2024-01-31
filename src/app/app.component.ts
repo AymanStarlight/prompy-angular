@@ -5,9 +5,21 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  template: `
+    <html lang="eng">
+      <body>
+        <div class="main">
+          <div class="gradient"></div>
+        </div>
+        <main class="app">
+          <!-- <NavBar /> -->
+          <router-outlet />
+        </main>
+      </body>
+    </html>
+  `, 
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'prompy-angular';
+  
 }
